@@ -11,143 +11,217 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
   color: #222;
-  background: #ffffff;
+  background: #eef1f3;
 }
 
+/* HEADER */
+header {
+  background: #154c3f;
+  color: white;
+  text-align: center;
+  padding: 45px 5%;
+}
+
+header h1 {
+  margin: 0 0 10px;
+  font-size: 42px;
+}
+
+header p {
+  margin: 4px 0;
+}
+
+/* NAVIGATION */
 nav {
-  max-width: 1100px;
-  margin: auto;
-  padding: 24px 30px;
+  width: 100%;
+  background: #51464d;
+  padding: 14px 5%;
 
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-name {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.nav-links {
-  display: flex;
-  gap: 24px;
+  justify-content: center;
+  gap: 35px;
 }
 
 nav a {
-  color: #222;
+  color: white;
   text-decoration: none;
+  font-weight: 600;
 }
 
 nav a:hover {
-  opacity: 0.6;
+  opacity: 0.75;
 }
 
+/* MAIN PAGE AREA */
 main {
+  width: 92%;
+  max-width: 1600px;
+  margin: 35px auto;
+  background: white;
+  padding: 45px 4%;
+}
+
+/* SECTIONS */
+section {
+  margin-bottom: 70px;
+}
+
+section:last-child {
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 32px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #154c3f;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+/* KEEP LONG PARAGRAPHS READABLE */
+section > p {
   max-width: 1000px;
-  margin: auto;
-  padding: 0 30px;
+  font-size: 18px;
 }
 
-.hero {
-  min-height: 70vh;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.hero h1 {
-  font-size: 64px;
-  margin-bottom: 10px;
-}
-
-.subtitle {
-  font-size: 24px;
-  margin: 0;
-}
-
-.intro {
-  font-size: 20px;
-  max-width: 650px;
+/* CARD GRID */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
   margin-top: 30px;
 }
 
-.buttons {
-  margin-top: 25px;
-  display: flex;
-  gap: 12px;
-}
-
-.button {
-  display: inline-block;
-  padding: 12px 20px;
-  border: 1px solid #222;
-  text-decoration: none;
-  color: white;
-  background: #222;
-}
-
-.button.secondary {
-  color: #222;
-  background: white;
-}
-
-section {
-  padding: 80px 0;
-}
-
-section h2 {
-  font-size: 36px;
-  margin-bottom: 30px;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
+/* INDIVIDUAL CARDS */
 .card {
-  border: 1px solid #ddd;
-  padding: 30px;
-  border-radius: 8px;
+  background: #f7f7f7;
+  border-left: 4px solid #154c3f;
+  padding: 28px;
+  min-height: 220px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  transition: 0.2s;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
+/* STATUS LABEL */
+.status {
+  display: inline-block;
+  padding: 5px 9px;
+  margin-bottom: 12px;
+  background: #e7f1ed;
+  color: #154c3f;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+/* LINKS */
+a {
+  color: #154c3f;
+}
+
+.card a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* PUBLICATIONS */
 .publication {
   padding: 20px 0;
   border-bottom: 1px solid #ddd;
+  max-width: 1100px;
 }
 
+/* FOOTER */
 footer {
   text-align: center;
-  padding: 60px 20px;
-  color: #777;
+  padding: 35px;
+  color: #666;
 }
 
+/* TABLET */
+@media (max-width: 1000px) {
+  main {
+    width: 94%;
+    padding: 35px 4%;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* PHONE */
 @media (max-width: 700px) {
+  header {
+    padding: 35px 20px;
+  }
+
+  header h1 {
+    font-size: 32px;
+  }
 
   nav {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .nav-links {
     flex-wrap: wrap;
-    justify-content: center;
+    gap: 15px 25px;
   }
 
-  .hero h1 {
-    font-size: 44px;
+  main {
+    width: 100%;
+    margin: 0;
+    padding: 30px 22px;
   }
 
   .cards {
     grid-template-columns: 1fr;
   }
 
+  section > p {
+    font-size: 16px;
+  }
+}
+
+/* FORCE WEBSITE TO USE MUCH MORE SCREEN WIDTH */
+
+main {
+  width: 92vw !important;
+  max-width: 1600px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+}
+
+.hero {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.hero .intro {
+  max-width: 900px !important;
+}
+
+section {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.cards {
+  width: 100% !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+
+nav {
+  width: 92vw !important;
+  max-width: 1600px !important;
 }
