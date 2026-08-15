@@ -34,10 +34,28 @@ header p {
 nav {
   width: 100%;
   background: #51464d;
-  padding: 14px 5%;
+  padding: 18px 5%;
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 35px;
+  gap: 32px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.nav-name {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 28px;
 }
 
 nav a {
