@@ -1,4 +1,4 @@
-* {
+﻿* {
   box-sizing: border-box;
 }
 
@@ -14,7 +14,6 @@ body {
   background: #eef1f3;
 }
 
-/* HEADER */
 header {
   background: #154c3f;
   color: white;
@@ -31,12 +30,10 @@ header p {
   margin: 4px 0;
 }
 
-/* NAVIGATION */
 nav {
   width: 100%;
   background: #51464d;
   padding: 14px 5%;
-
   display: flex;
   justify-content: center;
   gap: 35px;
@@ -52,7 +49,6 @@ nav a:hover {
   opacity: 0.75;
 }
 
-/* MAIN PAGE AREA */
 main {
   width: 92%;
   max-width: 1600px;
@@ -61,7 +57,6 @@ main {
   padding: 45px 4%;
 }
 
-/* SECTIONS */
 section {
   margin-bottom: 70px;
 }
@@ -81,13 +76,11 @@ h3 {
   margin-top: 0;
 }
 
-/* KEEP LONG PARAGRAPHS READABLE */
 section > p {
   max-width: 1000px;
   font-size: 18px;
 }
 
-/* CARD GRID */
 .cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -95,7 +88,6 @@ section > p {
   margin-top: 30px;
 }
 
-/* INDIVIDUAL CARDS */
 .card {
   background: #f7f7f7;
   border-left: 4px solid #154c3f;
@@ -109,7 +101,6 @@ section > p {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
-/* STATUS LABEL */
 .status {
   display: inline-block;
   padding: 5px 9px;
@@ -121,7 +112,52 @@ section > p {
   border-radius: 4px;
 }
 
-/* LINKS */
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.profile-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border: 1px solid rgba(21, 76, 63, 0.2);
+  border-radius: 999px;
+  background: #f7f9fa;
+  color: #1d2b2a;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  box-shadow: 0 4px 12px rgba(17, 38, 32, 0.04);
+}
+
+.profile-link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(21, 76, 63, 0.45);
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(17, 38, 32, 0.08);
+}
+
+.profile-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  color: #154c3f;
+  flex-shrink: 0;
+}
+
+.profile-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 a {
   color: #154c3f;
 }
@@ -135,21 +171,18 @@ a {
   text-decoration: underline;
 }
 
-/* PUBLICATIONS */
 .publication {
   padding: 20px 0;
   border-bottom: 1px solid #ddd;
   max-width: 1100px;
 }
 
-/* FOOTER */
 footer {
   text-align: center;
   padding: 35px;
   color: #666;
 }
 
-/* TABLET */
 @media (max-width: 1000px) {
   main {
     width: 94%;
@@ -161,7 +194,6 @@ footer {
   }
 }
 
-/* PHONE */
 @media (max-width: 700px) {
   header {
     padding: 35px 20px;
@@ -186,12 +218,19 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .profile-links {
+    width: 100%;
+  }
+
+  .profile-link {
+    flex: 1 1 220px;
+    justify-content: center;
+  }
+
   section > p {
     font-size: 16px;
   }
 }
-
-/* FORCE WEBSITE TO USE MUCH MORE SCREEN WIDTH */
 
 main {
   width: 92vw !important;
